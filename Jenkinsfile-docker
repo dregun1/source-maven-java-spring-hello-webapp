@@ -40,7 +40,7 @@ pipeline {
     stage('Publish Docker Image') {
       agent any
       steps {
-        withDockerRegistry(credentialsId: 'docker-hub-token', url: 'https://index.docker.io/v1/') {A
+        withDockerRegistry(credentialsId: 'docker-hub-token', url: 'https://index.docker.io/v1/') {
           sh 'docker image push dregun1/webapp:$BUILD_NUMBER'
           sh 'docker image push dregun1/webapp:latest'
         }
