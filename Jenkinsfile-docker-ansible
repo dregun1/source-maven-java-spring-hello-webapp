@@ -35,7 +35,7 @@ pipeline {
     stage('Tag Docker Image') {
       agent { label 'controller' }
       steps {
-        sh 'docker image tag myweb:hello-world dregun098/myweb:BUILD_NUMBER'
+        sh 'docker image tag myweb:hello-world dregun098/myweb:$BUILD_NUMBER'
         sh 'docker image tag myweb:hello-world dregun098/myweb:latest' 
       }
     }
