@@ -7,7 +7,7 @@
     docker_container:
       name: myweb
       #image: "devops2341/myweb:{{lookup('env', BUILD_NUMBER)}}"
-      image: "devops2341/myweb:latest"
+      image: "dregun098/myweb:latest"
       
       state: started 
       ports:
